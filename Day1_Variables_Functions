@@ -1,0 +1,79 @@
+Variables
+1. Store data values in a program.
+2. Created using the assignment operator (=).
+
+Functions
+1. Reusable blocks of code for specific tasks.
+2. Defined using def and executed by calling the function
+
+# Email Registration System
+
+## Variable Declaration with User Input
+
+first_name = input("Enter First Name: ")
+last_name = input("Enter Last Name: ")
+username = input("Enter Username: ")
+password = input("Enter Password: ")
+confirm_password = input("Confirm Password: ")
+phone_number = input("Enter Phone Number: ")
+recovery_email = input("Enter Recovery Email: ")
+date_of_birth = input("Enter Date of Birth (DD-MM-YYYY): ")
+gender = input("Enter Gender: ")
+state = input("Enter State: ")
+country = input("Enter Country: ")
+pincode = int(input("Enter Pincode: "))
+
+# Functions Used
+
+def register_user():
+  print("User registered successfully")
+
+def validate_email():
+  print("Email validated successfully")
+
+def send_verification():
+  print("Verification email sent successfully")
+
+
+# Student Registration System
+# Variable Declaration with User Input
+
+student_name = input("Enter Student Name: ")
+register_no = int(input("Enter Register Number: "))
+department = input("Enter Department: ")
+year = int(input("Enter Year: "))
+cgpa = float(input("Enter CGPA: "))
+email = input("Enter Email: ")
+phone_number = input("Enter Phone Number: ")
+
+# Functions Used
+
+def add_student():
+  print("Student added successfully")
+
+def update_student():
+  print("Student details updated successfully")
+
+def display_student():
+  print("Student details displayed successfully")
+
+# Online Shopping System
+
+# Variable Declaration with User Input
+
+customer_name = input("Enter Customer Name: ")
+product_name = input("Enter Product Name: ")
+quantity = int(input("Enter Quantity: "))
+price = float(input("Enter Price: "))
+payment_method = input("Enter Payment Method: ")
+
+# Functions Used
+
+def add_to_cart():
+  print("Product added to cart successfully")
+
+def calculate_total():
+  print("Total amount calculated successfully")
+
+def checkout():
+  print("Order placed successfully")
