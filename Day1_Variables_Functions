@@ -1,8 +1,8 @@
-Variables
+# Variables
 1. Store data values in a program.
 2. Created using the assignment operator (=).
 
-Functions
+# Functions
 1. Reusable blocks of code for specific tasks.
 2. Defined using def and executed by calling the function
 
