@@ -1,79 +1,230 @@
-# Variables
-1. Store data values in a program.
-2. Created using the assignment operator (=).
+# VARIABLE
+  A variable is a name used to store data in memory. It acts like a container that holds values.
 
-# Functions
-1. Reusable blocks of code for specific tasks.
-2. Defined using def and executed by calling the function
+# Syntax :
+variable_name = value
 
-# Email Registration System
+# Eg :
+name = "John"
 
-## Variable Declaration with User Input
+# Multiple Variable Assignment :
+x, y, z = 10, 20, 30
+a = b = c = 100
 
-first_name = input("Enter First Name: ")
-last_name = input("Enter Last Name: ")
-username = input("Enter Username: ")
-password = input("Enter Password: ")
-confirm_password = input("Confirm Password: ")
-phone_number = input("Enter Phone Number: ")
-recovery_email = input("Enter Recovery Email: ")
-date_of_birth = input("Enter Date of Birth (DD-MM-YYYY): ")
-gender = input("Enter Gender: ")
-state = input("Enter State: ")
-country = input("Enter Country: ")
-pincode = int(input("Enter Pincode: "))
+# Rules for Naming Variables
+  In Python, there are certain rules to name a variable. They are 
 
-# Functions Used
+  Variable names can contain:
+    •Letters (A-Z, a-z)
+    •Numbers (0-9)
+    •Underscore (_)
+  
+  Variable names must start with:
+    •A letter
+    •An underscore (_)
+  
+  Variable names cannot:
+    •Start with a number
+    •Contain spaces
+    •Use special symbols like @, #, $, %
 
-def register_user():
-  print("User registered successfully")
+# Printing Variables :
+  Use the print() function.
 
-def validate_email():
-  print("Email validated successfully")
+# Eg 1:
+name = "John"
+print(name)
 
-def send_verification():
-  print("Verification email sent successfully")
+# Eg 2:
+name = "John"
+age = 21
+print("Name:", name)
+print("Age:", age)
+
+# Eg 3:
+name = "John"
+age = 21
+print(f"My name is {name} and I am {age} years old.")
+
+# Getting Input from User
+  Use the input() function.
+
+1. String Input (str)
+name = input("Enter your name: ")
+print(f"Name: {name}")
+
+2. Integer Input (int)
+age = int(input("Enter your age: "))
+print(f"Age: {age}")
+
+3. Float Input (float)
+cgpa = float(input("Enter your CGPA: "))
+print(f"CGPA: {cgpa}")
+print(type(cgpa))
+
+4. Boolean Input (bool)
+  Since input() gives a string, a common way is:
+
+value = input("Enter True or False: ")
+is_valid = value == "True"
+print(f"Value: {is_valid}")
 
 
-# Student Registration System
-# Variable Declaration with User Input
-
-student_name = input("Enter Student Name: ")
-register_no = int(input("Enter Register Number: "))
-department = input("Enter Department: ")
-year = int(input("Enter Year: "))
+5. Taking Multiple Inputs
+name = input("Enter Name: ")
+age = int(input("Enter Age: "))
 cgpa = float(input("Enter CGPA: "))
-email = input("Enter Email: ")
-phone_number = input("Enter Phone Number: ")
 
-# Functions Used
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"CGPA: {cgpa}")
 
-def add_student():
-  print("Student added successfully")
+#Variable Reassignment
+  The value of a variable can be changed.
 
-def update_student():
-  print("Student details updated successfully")
+#Eg :
+age = 20
+print(age)
+age = 21
+print(age)
 
-def display_student():
-  print("Student details displayed successfully")
+**Exercise 1**
+name = input("Enter your name: ")
+area = input("Enter your area: ")
+problem = input("Enter a problem nearby: ")
+print(f"Report: {problem} at {area} by {name}")
 
-# Online Shopping System
+# FUNCTIONS
+  A function is a block of code that performs a specific task. Functions help us avoid repeating code and make programs easier to manage.
 
-# Variable Declaration with User Input
+# Syntax
+def function_name():
+    # code
 
-customer_name = input("Enter Customer Name: ")
-product_name = input("Enter Product Name: ")
-quantity = int(input("Enter Quantity: "))
-price = float(input("Enter Price: "))
-payment_method = input("Enter Payment Method: ")
+1. Simple Function (Without Parameters)
+  A function that does not take any input values.
 
-# Functions Used
+Eg :
+def greet():
+    print("Hello, Welcome to Python!")
 
-def add_to_cart():
-  print("Product added to cart successfully")
+greet()
 
-def calculate_total():
-  print("Total amount calculated successfully")
+2. Function with Parameters
+  Parameters allow us to pass values into a function.
 
-def checkout():
-  print("Order placed successfully")
+Eg :
+def greet(name):
+    print(f"Hello {name}")
+
+greet("Saindhavi")
+
+3. Function with Multiple Parameters
+def student(name, age):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+
+student("Saindhavi", 20)
+
+4. Function with Return Value
+  A function can return a result using return.
+
+Eg :
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(result)
+
+5. Using Multiple Functions
+  One function gets data, another displays it.
+
+def details():
+    name = input("Enter Name: ")
+    age = int(input("Enter Age: "))
+    
+    return name, age
+
+def display(name, age):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+
+name, age = details()
+display(name, age)
+
+
+Function with Validation
+  Validation means checking whether the user has entered valid data before processing it.
+
+def get_marks():
+    marks = int(input("Enter marks: "))
+
+    if 0 <= marks <= 100:
+        return marks
+    else:
+        print("Marks should be between 0 and 100")
+        return None
+
+marks = get_marks()
+
+if marks is not None:
+    print(f"Marks: {marks}")
+
+**Exercise 2**
+def check_photo(photo_uploaded):
+    if photo_uploaded:
+        print("Photo attached ✓")
+    else:
+        print("No photo — please upload one")
+check_photo(True)
+check_photo(False)
+
+**College Admission Registration**
+def get_details():
+    name = input("Enter Student Name: ")
+    age = input("Enter Age: ")
+    department = input("Enter Department: ")
+    email = input("Enter Email: ")
+
+    return name, age, department, email
+
+
+def print_details(name, age, department, email):
+    print("\n--- Student Details ---")
+    print("Name:", name)
+    print("Age:", age)
+    print("Department:", department)
+    print("Email:", email)
+
+
+name, age, department, email = get_details()
+print_details(name, age, department, email)
+
+**GMail Registration**
+def details():
+    first_name = input("Enter First Name: ")
+    last_name = input("Enter Last Name: ")
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
+    phone_number = input("Enter Phone Number: ")
+    recovery_email = input("Enter Recovery Email: ")
+    country = input("Enter Country: ")
+
+    return first_name, last_name, username, password, phone_number, recovery_email, country
+
+
+def display(first_name, last_name, username, password, phone_number, recovery_email, country):
+
+    print("\n----- Gmail Registration Details -----")
+    print(f"First Name      : {first_name}")
+    print(f"Last Name       : {last_name}")
+    print(f"Username        : {username}")
+    print(f"Password        : {password}")
+    print(f"Phone Number    : {phone_number}")
+    print(f"Recovery Email  : {recovery_email}")
+    print(f"Country         : {country}")
+
+
+first_name, last_name, username, password, phone_number, recovery_email, country = details()
+
+display(first_name, last_name, username, password, phone_number, recovery_email, country)
