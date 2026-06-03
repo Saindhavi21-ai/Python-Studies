@@ -12,7 +12,7 @@ print(student)
 
 # Accessing
   •Each and every element in a list has a Index Value. 
-  •The elements are accessed using the in dex values. 
+  •The elements are accessed using the index values. 
   •Index Value starts with 0.
 
 # Eg :
