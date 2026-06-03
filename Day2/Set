@@ -1,0 +1,109 @@
+# SET
+  • Set is a unordered collection of unique values with different data types stored in a single variable, which is enclosed within curly braces{}.
+  • It is mutable(changeable) 
+  • It does not allow duplicate values 
+
+# Eg
+fruits = {"Apple", "Banana", "Orange"}
+print(fruits)
+numbers = {10, 20, 30, 40}
+print(numbers)
+
+# Output
+{'Apple', 'Banana', 'Orange'}
+{40, 10, 20, 30}
+
+# Duplicate Values Are Removed
+fruits = {"Apple", "Banana", "Apple", "Orange"}
+print(fruits)
+
+# Output
+{'Apple', 'Banana', 'Orange'}
+
+# Methods in Set
+
+•add()	
+  Add one item
+•update()	
+  Add multiple items
+•remove()	
+  Remove an item
+•discard()	
+  Remove safely
+•pop()	
+  Remove random item
+•clear()	
+  Remove all items
+
+# Eg
+
+fruits = {"Apple", "Banana", "Orange"}
+print(f"Original Set: {fruits}")
+fruits.add("Mango")
+print(f"\nAfter add(): {fruits}")
+fruits.update(["Grapes", "Pineapple"])
+print(f"After update(): {fruits}")
+fruits.remove("Banana")
+print(f"After remove(): {fruits}")
+fruits.discard("Watermelon")  # No error if not present
+print(f"After discard(): {fruits}")
+print(f"Length of Set: {len(fruits)}")
+removed_item = fruits.pop()
+print(f"Removed Item using pop(): {removed_item}")
+print(f"After pop(): {fruits}")
+print(f"Is Apple present? {'Apple' in fruits}")
+print("\nElements in Set:")
+for fruit in fruits:
+    print(fruit)
+fruits.clear()
+print(f"\nAfter clear(): {fruits}")
+
+# Output
+Original Set: {'Apple', 'Banana', 'Orange'}
+After add(): {'Apple', 'Banana', 'Orange', 'Mango'}
+After update(): {'Apple', 'Banana', 'Orange', 'Mango', 'Grapes', 'Pineapple'}
+After remove(): {'Apple', 'Orange', 'Mango', 'Grapes', 'Pineapple'}
+After discard(): {'Apple', 'Orange', 'Mango', 'Grapes', 'Pineapple'}
+Length of Set: 5
+Removed Item using pop(): Orange
+After pop(): {'Apple', 'Mango', 'Grapes', 'Pineapple'}
+Is Apple present? True
+Elements in Set:
+Apple
+Mango
+Grapes
+Pineapple
+After clear(): set()
+
+# Set Operations
+  Python provides special operators for performing mathematical set operations.
+
+1. Union (|)
+  Combines all unique elements from both sets.
+2. Intersection (&)
+  Returns only the common elements.
+3. Difference (-)
+  Returns elements present in the first set but not in the second set.
+4. Symmetric Difference (^)
+  Returns elements present in either set but not in both.
+
+#Eg
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(f"Set 1: {set1}")
+print(f"Set 2: {set2}")
+print(f"\nUnion (|): {set1 | set2}")
+print(f"Intersection (&): {set1 & set2}")
+print(f"Difference (set1 - set2): {set1 - set2}")
+print(f"Difference (set2 - set1): {set2 - set1}")
+print(f"Symmetric Difference (^): {set1 ^ set2}")
+
+#Output
+Set 1: {1, 2, 3, 4}
+Set 2: {3, 4, 5, 6}
+Union (|): {1, 2, 3, 4, 5, 6}
+Intersection (&): {3, 4}
+Difference (set1 - set2): {1, 2}
+Difference (set2 - set1): {5, 6}
+Symmetric Difference (^): {1, 2, 5, 6}
+
