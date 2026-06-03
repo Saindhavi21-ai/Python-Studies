@@ -1,41 +1,27 @@
-def get_movies(actor):
-    movies = {
-        "Vijay": ["Ghilli", "Thuppakki", "Mersal", "Master", "Leo", "Pokkiri", "Kaththi", "Sarkar", "Bigil", "Theri"],
+movies = {
+    "Vijay": ["Ghilli", "Thuppakki", "Mersal", "Master", "Leo", "Pokkiri", "Kaththi", "Bigil", "Theri", "Sarkar"],
 
-        "Ajith": ["Mankatha", "Billa", "Viswasam", "Veeram", "Yennai Arindhaal", "Valimai", "Vedalam", "Aarambam", "Thunivu", "Citizen"],
+    "Ajith": ["Mankatha", "Billa", "Viswasam", "Veeram", "Vedalam",  "Aarambam", "Yennai Arindhaal", "Citizen", "Thunivu", "Valimai"],
 
-        "Rajinikanth": ["Baasha", "Sivaji", "Enthiran", "Jailer", "Padayappa", "Annamalai", "Kabali", "Petta", "Muthu", "Chandramukhi"],
+    "Rajinikanth": ["Baasha", "Sivaji", "Enthiran", "Jailer", "Padayappa", "Annamalai", "Kabali", "Petta", "Muthu", "Chandramukhi"],
 
-        "Suriya": ["Ghajini", "Vaaranam Aayiram", "Singam", "Ayan", "Soorarai Pottru", "Jai Bhim", "24", "Kaakha Kaakha", "Vel", "Pasanga 2"],
+    "Suriya": ["Ghajini", "Vaaranam Aayiram", "Singam", "Ayan", "Soorarai Pottru", "Jai Bhim", "24", "Kaakha Kaakha", "Vel", "Pasanga 2"],
 
-        "Dhanush": ["Asuran", "VIP", "Karnan", "Thiruchitrambalam", "Polladhavan", "Aadukalam", "Maari", "Velaiilla Pattadhari", "Captain Miller", "Raayan"],
+    "Dhanush": ["Asuran", "VIP", "Karnan", "Thiruchitrambalam", "Polladhavan", "Aadukalam", "Maari", "Velaiilla Pattadhari", "Captain Miller", "Raayan"],
 
-        "Sivakarthikeyan": ["Doctor", "Don", "Amaran", "Remo", "Varuthapadatha Valibar Sangam", "Ethir Neechal", "Maaveeran", "Rajini Murugan", "Namma Veettu Pillai", "Kedi Billa Killadi Ranga"]
-    }
+    "Sivakarthikeyan": ["Doctor", "Don", "Amaran", "Remo", "Maaveeran", "Ethir Neechal", "Rajini Murugan", "Namma Veettu Pillai", "Varuthapadatha Valibar Sangam", "Kedi Billa Killadi Ranga"]
+}
 
-    return movies.get(actor, [])
+top_x = int(input("Please enter top x number (1-10): "))
+actor = input("Please enter the actor name: ")
 
-
-def print_movies(actor, top_x):
-    movie_list = get_movies(actor)
-
-    if not movie_list:
-        print("Actor not found!")
-        return
-
+if actor in movies and 1 <= top_x <= 10:
     print(f"\nHere are the top {top_x} super hit movies of {actor}")
 
     for i in range(top_x):
-        print(f"{i+1}. {movie_list[i]}")
-
-
-top_x = int(input("Please enter top x number (1-10): "))
-
-if 1 <= top_x <= 10:
-    actor = input("Please enter the actor name: ")
-    print_movies(actor, top_x)
+        print(f"{i+1}. {movies[actor][i]}")
 else:
-    print("Please enter a number between 1 and 10")
+    print("Invalid actor name or number")
 
 # Output 
 Please enter top x number (1-10): 7
