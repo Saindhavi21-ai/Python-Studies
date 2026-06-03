@@ -1,0 +1,117 @@
+# LIST
+  • List is a ordered collection of multiple values with different data types stored in a single variable, which is enclosed within square brackets[].
+  • It is mutable(changeable)
+  • It allows duplicate values
+
+# Eg :
+fruits=["apple","banana","orange"]
+print(fruits)
+
+student=["Saindhavi",19,8.5]
+print(student)
+
+# Accessing
+  •Each and every element in a list has a Index Value. 
+  •The elements are accessed using the in dex values. 
+  •Index Value starts with 0.
+
+# Eg :
+fruits = ["Apple", "Banana", "Orange"]
+print(fruits[0])
+print(fruits[1])
+
+# Output
+Apple
+Banana
+
+# Negative Indexing
+  Negative Index is used to access the elements in reverse order.
+
+#Eg :
+fruits = ["Apple", "Banana", "Orange"]
+print(fruits[-1])
+
+#Output :
+Orange
+
+# Modifying element in a List
+  The element in a list can be modified with the Index value
+
+# Eg:
+fruits = ["Apple", "Banana", "Orange"]
+fruits[1] = "Mango"
+print(fruits)
+
+# Output
+['Apple', 'Mango', 'Orange']
+
+# Methods used in List
+
+•append()	
+  Add item at end
+•insert()	
+  Add item at a specified position
+•remove()	
+  Remove specific item
+•pop()	
+  Remove by index. If index is not specified, removes the last element
+•len()	
+  Count the no of items
+•sort()	
+  Sorts the list
+•reverse()	
+  Reverse list
+•clear()
+  Empties the list
+
+# Eg 
+
+fruits = ["Apple", "Banana", "Orange"]
+print("Original List:", fruits)
+fruits.append("Mango")
+print("After append():", fruits)
+fruits.insert(1, "Grapes")
+print("After insert():", fruits)
+fruits.remove("Banana")
+print("After remove():", fruits)
+removed_item = fruits.pop(2)
+print("After pop():", fruits)
+print("Popped Item:", removed_item)
+print("Length of List:", len(fruits))
+fruits.sort()
+print("After sort():", fruits)
+fruits.reverse()
+print("After reverse():", fruits)
+fruits.clear()
+print("After clear():", fruits)
+
+#Output :
+Original List: ['Apple', 'Banana', 'Orange']
+After append(): ['Apple', 'Banana', 'Orange', 'Mango']
+After insert(): ['Apple', 'Grapes', 'Banana', 'Orange', 'Mango']
+After remove(): ['Apple', 'Grapes', 'Orange', 'Mango']
+After pop(): ['Apple', 'Grapes', 'Mango']
+Popped Item: Orange
+Length of List: 3
+After sort(): ['Apple', 'Grapes', 'Mango']
+After reverse(): ['Mango', 'Grapes', 'Apple']
+After clear(): []
+
+# Passing a List to a Function
+  A list can be passed as an argument (parameter) to a function, just like a variable.
+
+# Eg : Display a List
+def display_fruits(fruits):
+    print("Fruits List:")
+    
+    for fruit in fruits:
+        print(fruit)
+
+fruits = ["Apple", "Banana", "Orange"]
+display_fruits(fruits)
+
+# Output :
+Fruits List:
+Apple
+Banana
+Orange
