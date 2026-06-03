@@ -1,0 +1,96 @@
+# TUPLE
+  •Tuple is also an ordered collection of multiple values with different data types in a single variable, enclosed within parenthesis().
+  •It is immutable(unchangeable).
+  •It also allows duplicate values.
+
+# Eg 
+details = ("Saindhavi", 20, 8.5, True)
+print(details)
+
+numbers = (10, 20, 30, 40)
+print(numbers)
+
+# Output
+('Saindhavi', 20, 8.5, True)
+
+(10, 20, 30, 40)
+
+# Accessing
+  •Each and every element in a tuple has a Index Value. 
+  •The elements are accessed using the index values. 
+  •Index Value starts with 0.
+
+# Eg
+fruits = ("Apple", "Banana", "Orange")
+print(fruits[0])
+print(fruits[1])
+
+# Output
+Apple
+Banana
+
+# Negative Indexing
+  Negative Index is used to access the elements in reverse order.
+
+# Eg
+fruits = ("Apple", "Banana", "Orange")
+print(fruits[-1])
+
+# Output
+Orange
+
+# Tuple Cannot Be Modified
+fruits = ("Apple", "Banana", "Orange")
+fruits[1] = "Mango"
+
+# Output
+TypeError: 'tuple' object does not support item assignment
+
+# Methods used in Tuple
+
+•len()	
+  Returns the number of elements in the tuple	
+•max()	
+  Returns the largest element	
+•min()	
+  Returns the smallest element	
+•sum()	
+  Returns the sum of all numeric elements	
+•sorted()	
+  Returns a sorted list of the tuple elements
+
+# Eg
+numbers = (30, 10, 20, 40)
+print(f"Length: {len(numbers)}")
+print(f"Maximum: {max(numbers)}")
+print(f"Minimum: {min(numbers)}")
+print(f"Sum: {sum(numbers)}")
+print(f"Sorted: {sorted(numbers)}")
+
+# Output
+Length: 4
+Maximum: 40
+Minimum: 10
+Sum: 100
+Sorted: [10, 20, 30, 40]
+
+Tuples does not support the following methods 
+  •append()
+  •insert()
+  •reverse()
+  •rempve()
+  •sort()
+
+# Passing a Tuple to a Function
+
+def display_subjects(subjects):
+    for subject in subjects:
+        print(subject)
+
+subjects = ("Maths", "Physics", "Python")
+display_subjects(subjects)
+
+# Output
+Maths
+Physics
+Python
