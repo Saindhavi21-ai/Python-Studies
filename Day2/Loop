@@ -1,0 +1,210 @@
+#LOOPS
+  Loops are used to execute a block of code repeatedly.Python has two main loops:
+  •for loop
+  •while loop
+
+1. For Loop
+  Used when you know how many times you want to repeat.
+
+#Syntax
+for variable in sequence:
+    # code
+
+#Example
+for i in range(5):
+    print(i)
+
+#Output
+0
+1
+2
+3
+4
+
+# range() Function
+
+•range(stop)
+#Eg
+for i in range(5):
+    print(i)
+
+#Output:
+0
+1
+2
+3
+4
+
+•range(start, stop)
+#Eg
+for i in range(1, 6):
+    print(i)
+
+#Output:
+1
+2
+3
+4
+5
+
+•range(start, stop, step)
+#Eg
+for i in range(0, 11, 2):
+    print(i)
+
+#Output:
+0
+2
+4
+6
+8
+10
+
+#Looping Through a String
+#Eg
+name = "Python"
+for letter in name:
+    print(letter)
+
+#Output:
+P
+y
+t
+h
+o
+n
+
+#Looping Through a List
+fruits = ["Apple", "Banana", "Orange"]
+for fruit in fruits:
+    print(fruit)
+
+#Output:
+Apple
+Banana
+Orange
+
+#Looping Through a Tuple
+subjects = ("Maths", "Physics", "Python")
+for subject in subjects:
+    print(subject)
+
+#Looping Through a Set
+colors = {"Red", "Green", "Blue"}
+for color in colors:
+    print(color)
+
+
+2. While Loop
+  Used when the number of repetitions is not known beforehand.
+
+#Syntax
+while condition:
+    # code
+
+#Eg
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+
+#Output
+1
+2
+3
+4
+5
+
+#Infinite Loop
+while True:
+    print("Hello")
+
+**NOTE : This runs forever until stopped.**
+
+#break Statement
+  Stops the loop immediately.
+
+#Eg
+for i in range(1, 11):
+    if i == 5:
+        break
+
+    print(i)
+
+#Output
+1
+2
+3
+4
+
+#continue Statement
+  Skips the current iteration.
+
+#Eg
+for i in range(1, 6):
+    if i == 3:
+        continue
+
+    print(i)
+
+#Output
+1
+2
+4
+5
+
+#pass Statement
+  Placeholder for future code.
+
+#Eg
+for i in range(5):
+    pass
+
+No output.
+
+#Nested Loops
+  A loop inside another loop.
+
+#Eg
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+
+#Output
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+
+Example: 
+•Sum of Numbers
+total = 0
+for i in range(1, 6):
+    total += i
+print(f"Sum = {total}")
+
+#Output
+Sum = 15
+
+•User Validation with While Loop
+while True:
+    age = int(input("Enter Age: "))
+    if age > 0:
+        break
+    print("Invalid Age!")
+print(f"Age: {age}")
+
+#Output 1
+Enter Age: 19
+Age: 19
+
+#Output 2
+Enter Age: -3
+Invalid Age!
+Enter Age: 6
+Age: 6
