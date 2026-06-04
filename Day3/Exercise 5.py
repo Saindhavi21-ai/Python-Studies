@@ -10,6 +10,3 @@ name  :  Saindhavi
 area  :  Coimbatore
 issue  :  Garbage Dump
 Photo_filename  :  Issue.jpg
-
-
-# Ex 6
