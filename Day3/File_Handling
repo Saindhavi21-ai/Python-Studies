@@ -1,0 +1,73 @@
+# FILE HANDLING
+
+#Reading a File
+with open("student.txt", "r") as file:
+content = file.read()
+print(content)
+
+# Output
+Saindhavi
+CSE
+20
+
+# Writing to a File
+with open("student.txt", "w") as file :
+file.write("Hello Python")
+
+# Output in File
+Hello Python
+
+#Appending Data
+with open("student.txt", "a") as file:
+file.write("\nWelcome")
+
+# Output in File
+Hello Python
+Welcome
+
+
+# JSON File
+
+import json
+
+student = {
+    "name": "Saindhavi",
+    "age": 20,
+    "department": "CSE"
+}
+
+with open("student.json", "w") as file:
+    json.dump(student, file, indent=4)
+
+print("JSON file created successfully!")
+
+# Load JSON
+
+students.json
+[
+    {
+        "name": "Sai",
+        "age": 20
+    },
+    {
+        "name": "Arun",
+        "age": 21
+    },
+    {
+        "name": "Priya",
+        "age": 19
+    }
+]
+--------
+import json
+
+with open("students.json", "r") as file:
+    students = json.load(file)
+
+for student in students:
+    print(student["name"])
+ 
+#Output
+Sai
+Arun
+Priya
