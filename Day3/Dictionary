@@ -1,0 +1,167 @@
+# DICTIONARY
+    A Dictionary is a collection of data stored in key : value pairs.
+
+# Syntax
+dictionary_name = {
+    key1: value1,
+    key2: value2
+}
+
+# Eg
+student = {
+    "name": "Saindhavi",
+    "age": 20,
+    "department": "CSE"
+}
+
+# Accessing Values
+  Use the key to get the value.
+
+# Eg
+student = {
+    "name": "Saindhavi",
+    "age": 18
+}
+print(student["name"])
+
+# Output
+Saindhavi
+
+# Adding a New Key-Value Pair
+student = {
+    "name": "Saindhavi"
+}
+student["city"] = "Coimbatore"
+print(student)
+
+# Output
+{'name': 'Saindhavi', 'city': 'Coimbatore'}
+
+# Updating a Value
+student = {
+    "age": 20
+}
+student["age"] = 18
+
+print(student)
+Output
+{'age': 18}
+
+# Methods in Dictionary
+
+•get()	
+  Get value using key
+•keys()	
+  Return all keys
+•values()	
+  Return all values
+•items()	
+  Return key-value pairs
+•update()	
+  Add/update items
+•pop()	
+  Remove item
+•clear()	
+  Remove all items
+•len()	
+  Count key-value pairs
+
+# Eg
+# Creating a Dictionary
+student = {
+    "name": "Saindhavi",
+    "age": 18,
+    "department": "CSE"
+}
+
+print("Original Dictionary:")
+print(student)
+
+print("\nUsing get():")
+print(student.get("name"))
+
+print("\nUsing keys():")
+print(student.keys())
+
+print("\nUsing values():")
+print(student.values())
+
+print("\nUsing items():")
+print(student.items())
+
+student.update({"city": "Madurai", "cgpa": 8.5})
+print("\nAfter update():")
+print(student)
+
+print("\nUsing len():")
+print(len(student))
+
+print("\nLooping through Dictionary:")
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+removed_value = student.pop("city")
+print("\nAfter pop():")
+print(student)
+print(f"Removed Value: {removed_value}")
+
+student.clear()
+print("\nAfter clear():")
+print(student)
+
+# Output 
+Original Dictionary:
+{'name': 'Saindhavi', 'age': 18, 'department': 'CSE'}
+
+Using get():
+Saindhavi
+
+Using keys():
+dict_keys(['name', 'age', 'department'])
+
+Using values():
+dict_values(['Saindhavi', 18, 'CSE'])
+
+Using items():
+dict_items([('name', 'Saindhavi'), ('age', 18), ('department', 'CSE')])
+
+After update():
+{'name': 'Saindhavi', 'age': 18, 'department': 'CSE', 'city': 'Madurai', 'cgpa': 8.5}
+
+Using len():
+5
+
+Looping through Dictionary:
+name: Saindhavi
+age: 18
+department: CSE
+city: Madurai
+cgpa: 8.5
+
+After pop():
+{'name': 'Saindhavi', 'age': 18, 'department': 'CSE', 'cgpa': 8.5}
+Removed Value: Madurai
+
+After clear():
+{}
+
+# Passing a Dictionary to a Function
+  A dictionary can be passed as an argument to a function.
+
+# Eg
+def display_student(student):
+    print(f"Name: {student['name']}")
+    print(f"Age: {student['age']}")
+    print(f"Department: {student['department']}")
+
+student = {
+    "name": "Saindhavi",
+    "age": 20,
+    "department": "CSE"
+}
+display_student(student)
+
+# Output
+Name: Saindhavi
+Age: 20
+Department: CSE
