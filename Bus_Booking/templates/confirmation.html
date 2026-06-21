@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmation</title>
+</head>
+<body>
+
+    <h1> Booking Successful </h1>
+
+    <hr>
+
+    <h2>Ticket Details</h2>
+
+    <p><b>Ticket ID:</b> {{ ticket_id }}</p>
+
+    <p><b>Passenger Name:</b> {{ name }}</p>
+
+    <p><b>Age:</b> {{ age }}</p>
+
+    <p><b>Gender:</b> {{ gender }}</p>
+
+    <p><b>Mobile Number:</b> {{ mobile }}</p>
+
+    <hr>
+
+    <h2>Bus Details</h2>
+
+    <p><b>Bus Name:</b> {{ bus.name }}</p>
+
+    <p><b>Source:</b> {{ bus.source }}</p>
+
+    <p><b>Destination:</b> {{ bus.destination }}</p>
+
+    <p><b>Departure Time:</b> {{ bus.time }}</p>
+
+    <p><b>Price Per Seat:</b> ₹{{ bus.price }}</p>
+
+    <hr>
+
+    <h2>Booking Summary</h2>
+
+    <p><b>Seats Booked:</b> {{ seats }}</p>
+
+    <p><b>Total Amount:</b> ₹{{ total }}</p>
+
+    <hr>
+
+    <h3>Thank You for Booking With Us!</h3>
+
+    <a href="/">
+        <button>Book Another Ticket</button>
+    </a>
+
+</body>
+</html>
