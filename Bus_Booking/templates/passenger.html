@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Details</title>
+</head>
+<body>
+
+    <h1>Passenger Details</h1>
+
+    <h3>Selected Bus Information</h3>
+
+    <p><b>Bus Name:</b> {{ bus.name }}</p>
+    <p><b>Source:</b> {{ bus.source }}</p>
+    <p><b>Destination:</b> {{ bus.destination }}</p>
+    <p><b>Departure Time:</b> {{ bus.time }}</p>
+    <p><b>Ticket Price:</b> ₹{{ bus.price }}</p>
+    <p><b>Available Seats:</b> {{ bus.seats }}</p>
+
+    <hr>
+
+    <form action="/confirm" method="POST">
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        <br><br>
+
+        <label>Mobile Number:</label>
+        <input type="text" name="mobile" required>
+        <br><br>
+
+        <label>Number of Seats:</label>
+        <input type="number" name="seats" min="1" required>
+        <br><br>
+
+        <input type="submit" value="Confirm Booking">
+
+    </form>
+
+</body>
+</html>
